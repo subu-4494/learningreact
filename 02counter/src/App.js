@@ -11,8 +11,14 @@ function App() {
 
   const addvalue = () => {
      console.log("value added",counter);
-    if(counter<=19) counter = counter +1;
-     setcounter(counter);
+   
+     setcounter(counter => counter+1);
+     setcounter(counter => counter+1);   // this is callback it takes prev val of counter 
+                           // and update +1 from prev value otherwise if we write according to 
+                           // prev vals it likely to does not respond with all this
+     setcounter(counter => counter+1);
+     setcounter(counter => counter+1);
+
 }
 
 const removeval =() => {
